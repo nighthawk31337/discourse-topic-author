@@ -3,7 +3,7 @@
 {{#if showParticipants}}
   {{raw "list/posters-column" posters=topic.participants}}
 {{/if}}
-<td class='author' style="width: 70px;"><a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}">{{avatar topic.creator imageSize="45"}}</a></td>
+<td class='author' style="width: 70px;"><a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}">{{topic.creator}}</a></td>
 
 {{#if bulkSelectEnabled}}
   <td class="bulk-select">
@@ -93,7 +93,7 @@
 <script type="text/x-handlebars" data-template-name="components/latest-topic-list-item">
 <div class='topic-poster'>
  {{#user-link user=topic.creator}}
- {{topic.creator}}
+  {{avatar topic.creator imageSize="large"}}
  {{/user-link}}
 </div>
 <div class='main-link'>
